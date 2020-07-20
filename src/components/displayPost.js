@@ -119,7 +119,7 @@ class DisplayPost extends Component {
         return posts.map((post) => {
             return(<div className= "card" key={post.id}>
                 <div className="container">
-                    <span className= "alignButton">{post.likes.items.length}</span>
+                    <span className= "alignButton">{post.likes.items.length? post.likes.items.length: 0 }</span>
                     {post.likes.items.filter(x => x.likeOwnerId === postOwnerId) && 
                     <span 
                         className= "alignButton"
