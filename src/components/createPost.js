@@ -39,7 +39,7 @@ class CreatePost extends Component {
             postOwnerUsername: this.state.postOwnerUsername,
             postTitle: this.state.postTitle,
             postBody: this.state.postBody,
-            createdAt: new Date().toISOString,
+            createdAt: new Date().toISOString(),
         }
 
         await API.graphql(graphqlOperation(createPost, {input}));
